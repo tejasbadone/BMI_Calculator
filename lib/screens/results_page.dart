@@ -6,9 +6,9 @@ import 'package:bmi_calculator/components/reusable_card.dart';
 class ResultsPage extends StatelessWidget {
   ResultsPage({this.bmiResult, this.resultText, this.interpretation});
 
-  final String bmiResult;
-  final String resultText;
-  final String interpretation;
+  final String? bmiResult;
+  final String? resultText;
+  final String? interpretation;
 
   @override
   Widget build(BuildContext context) {
@@ -44,15 +44,15 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    resultText.toUpperCase(),
+                    resultText!.toUpperCase(),
                     style: kResultTextStyle,
                   ),
                   Text(
-                    bmiResult.toUpperCase(),
+                    bmiResult!.toUpperCase(),
                     style: kBMITextStyle,
                   ),
                   Text(
-                    interpretation.toUpperCase(),
+                    interpretation!.toUpperCase(),
                     textAlign: TextAlign.center,
                   )
                 ],

@@ -3,12 +3,12 @@ import 'dart:math';
 class CalculatorBrain {
   CalculatorBrain({this.weight, this.height});
 
-  final int height;
-  final int weight;
-  double bmi;
+  final int? height;
+  final int? weight;
+  late double bmi;
 
   String calculateBMI() {
-    bmi = weight / pow(height / 100, 2);
+    bmi = weight! / pow(height! / 100, 2);
     return bmi.toStringAsFixed(1);
   }
 

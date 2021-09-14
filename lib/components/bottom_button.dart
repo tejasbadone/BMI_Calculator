@@ -4,17 +4,17 @@ import '../constants.dart';
 class BottomButton extends StatelessWidget {
   BottomButton({this.onTap, this.buttonTitle});
 
-  final Function onTap;
-  final String buttonTitle;
+  final Function? onTap;
+  final String? buttonTitle;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: onTap as void Function()?,
       child: Container(
         child: Center(
           child: Text(
-            buttonTitle,
+            buttonTitle!,
             style: kLargeButtonTextStyle,
           ),
         ),

@@ -4,8 +4,8 @@ import '../constants.dart';
 class IconContent extends StatelessWidget {
   IconContent({this.icon, this.label});
 
-  final IconData icon;
-  final String label;
+  final IconData? icon;
+  final String? label;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class IconContent extends StatelessWidget {
           height: 15.0,
         ),
         Text(
-          label,
+          label!,
           style: kLabelTextStyle,
         )
       ],
